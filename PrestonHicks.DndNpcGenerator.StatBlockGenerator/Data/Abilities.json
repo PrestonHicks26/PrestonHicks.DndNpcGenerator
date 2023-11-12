@@ -1,3 +1,13 @@
-{
-
-}
+[
+  {
+    "Name": "example",
+    "Description": "It does a bunch of cool stuff",
+    "Origin": "src",
+    "Cost": 1, // generator 'buys' abilities from a budget 
+    "Tags": [
+      "fire",
+      "leader",
+      "dwarf"
+    ]
+  }
+]

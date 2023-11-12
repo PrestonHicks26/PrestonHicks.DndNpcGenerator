@@ -1,13 +1,13 @@
 [
   {
-    "name": "example",
-    "origin": "custom",
-    "validRounds": [
+    "Name": "example",
+    "Origin": "custom",
+    "ValidRounds": [
       1,
       2,
       3
     ],
-    "tags": [
+    "Tags": [
       "fire",
       "leader",
       "dwarf"
