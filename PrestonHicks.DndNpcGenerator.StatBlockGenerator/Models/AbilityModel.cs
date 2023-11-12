@@ -20,22 +20,24 @@ namespace PH.DndNpcGenerator.StatBlockGenerator.Models
         {
             // deserialize Abilities.json using list of Ability objects
             List<Ability> AbilityList;
-            //C:\Users\prest\source\repos\PrestonHicks.DndNpcGenerator\PrestonHicks.DndNpcGenerator.StatBlockGenerator\PH.DndNpcGenerator.StatBlockGenerator.csproj
-            using (StreamReader reader = new StreamReader("..\\PrestonHicks.DndNpcGenerator.StatBlockGenerator\\Data\\Abilities.json"))
-            {
-                var AbilitiesJson = reader.ReadToEnd();
-                AbilityList = JsonConvert.DeserializeObject<List<Ability>>(AbilitiesJson);
-            }
+            Ability SelectedAbility;
+            AbilityList = Utilities.Util.LoadJsonData<Ability>("..\\PrestonHicks.DndNpcGenerator.StatBlockGenerator\\Data\\Abilities.json");
+            //using (StreamReader reader = new StreamReader("..\\PrestonHicks.DndNpcGenerator.StatBlockGenerator\\Data\\Abilities.json"))
+            //{
+            //    var AbilitiesJson = reader.ReadToEnd();
+            //    AbilityList = JsonConvert.DeserializeObject<List<Ability>>(AbilitiesJson);
+            //}
 
             // create sublist of all valid abilities based on point value and valid tags
 
             // choose random ability from sublist
 
+            SelectedAbility = AbilityList[0];
             // set properties based on randomly chosen ability
-            Name = AbilityList[0].Name;
-            Description = AbilityList[0].Description;
-            Origin = AbilityList[0].Origin;
-            Tags = AbilityList[0].Tags;
+            Name = SelectedAbility.Name;
+            Description = SelectedAbility.Description;
+            Origin = SelectedAbility.Origin;
+            Tags = SelectedAbility.Tags;
         }
         private class Ability
         {

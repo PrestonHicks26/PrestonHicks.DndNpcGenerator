@@ -1,0 +1,2 @@
+﻿ - Use properties folder to store base path for data
+ - put data files in Properties???
